@@ -1,0 +1,32 @@
+{
+  "name": "ts-server-boilerplate",
+  "version": "0.0.0",
+  "description": "Boilerplate for Node.js development in TypeScript.",
+  "engineStrict": true,
+  "devDependencies": {
+    "@types/jest": "~22.2.2",
+    "@types/node": "~8.10.0",
+    "@types/ramda": "github:types/npm-ramda#dist",
+    "jest": "~22.4.3",
+    "rimraf": "~2.6.2",
+    "ts-jest": "~22.4.2",
+    "tslint": "~5.9.1",
+    "tslint-microsoft-contrib": "~5.0.3",
+    "tsutils": "~2.24.0",
+    "typescript": "~2.8.1"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "start": "tsc -p tsconfig.release.json & node build/src/index",
+    "build": "tsc -p tsconfig.release.json",
+    "test-c": "jest --coverage",
+    "test": "jest --watch"
+  },
+  "author": "Simon",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "tslib": "~1.9.0"
+  }
+}
